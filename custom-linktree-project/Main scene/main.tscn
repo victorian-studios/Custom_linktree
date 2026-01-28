@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://d33lo87kdxk4s"]
+
+[ext_resource type="Script" uid="uid://btiosjh5a2s2y" path="res://Main scene/Scripts/main.gd" id="1_g3q3t"]
+[ext_resource type="Texture2D" uid="uid://bf4h4odpvas27" path="res://Main scene/Images/button.png" id="3_tjwe2"]
+[ext_resource type="Texture2D" uid="uid://dj1d316q35yv" path="res://Main scene/Images/logo preta.png" id="3_xmgng"]
+[ext_resource type="FontFile" uid="uid://beonso1q1xkiu" path="res://Main scene/Fonts/Century Gothic.ttf" id="4_tjwe2"]
+[ext_resource type="Texture2D" uid="uid://xq840kj1hgu5" path="res://Main scene/Images/icon_discord.png" id="7_b5buf"]
+[ext_resource type="Texture2D" uid="uid://1xp28bdnoc3y" path="res://Main scene/Images/youtube_3670147.png" id="7_dm208"]
+[ext_resource type="Texture2D" uid="uid://tc7x74f3f216" path="res://Main scene/Images/instagram.png" id="8_bisoy"]
+[ext_resource type="Texture2D" uid="uid://d2v87oh0j4t4k" path="res://Main scene/Images/bluesky-blue-round-circle-logo-24461.png" id="9_b5buf"]
+[ext_resource type="Texture2D" uid="uid://cx5rj6umr3wah" path="res://Main scene/Images/icon_twitter.png" id="9_dm208"]
+
+[node name="Node2D" type="Node2D" unique_id=1594328892]
+script = ExtResource("1_g3q3t")
+
+[node name="Control" type="Control" parent="." unique_id=252080680]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 834.0
+offset_top = 103.0
+offset_right = 834.0
+offset_bottom = 103.0
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="Logo" type="Sprite2D" parent="Control" unique_id=1990773879]
+position = Vector2(141, 191)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_xmgng")
+
+[node name="Buttons_1" type="FlowContainer" parent="Control" unique_id=1885972550]
+layout_mode = 1
+offset_top = 388.0
+offset_right = 800.0
+offset_bottom = 1568.0
+scale = Vector2(0.3, 0.3)
+theme_override_constants/h_separation = 70
+theme_override_constants/v_separation = 70
+
+[node name="Discord" type="TextureButton" parent="Control/Buttons_1" unique_id=1038922078]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_tjwe2")
+
+[node name="Text" type="RichTextLabel" parent="Control/Buttons_1/Discord" unique_id=1394229205]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/normal_font = ExtResource("4_tjwe2")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Discord"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="Control/Buttons_1/Discord" unique_id=1852855630]
+position = Vector2(100, 90)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("7_b5buf")
+
+[node name="Youtube" type="TextureButton" parent="Control/Buttons_1" unique_id=541352908]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_tjwe2")
+
+[node name="Text" type="RichTextLabel" parent="Control/Buttons_1/Youtube" unique_id=207968702]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.5258789e-05
+offset_bottom = 1.5258789e-05
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/normal_font = ExtResource("4_tjwe2")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Youtube"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="Control/Buttons_1/Youtube" unique_id=364241006]
+position = Vector2(100, 90)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("7_dm208")
+
+[node name="Instagram" type="TextureButton" parent="Control/Buttons_1" unique_id=619412153]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_tjwe2")
+
+[node name="Text" type="RichTextLabel" parent="Control/Buttons_1/Instagram" unique_id=1893692295]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.5258789e-05
+offset_bottom = 1.5258789e-05
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/normal_font = ExtResource("4_tjwe2")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Instagram"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="Control/Buttons_1/Instagram" unique_id=636146197]
+position = Vector2(100, 90)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("8_bisoy")
+
+[node name="Bluesky" type="TextureButton" parent="Control/Buttons_1" unique_id=1877257242]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_tjwe2")
+
+[node name="Text" type="RichTextLabel" parent="Control/Buttons_1/Bluesky" unique_id=590701145]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.2888184e-05
+offset_bottom = -3.0517578e-05
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/normal_font = ExtResource("4_tjwe2")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Bluesky"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="Control/Buttons_1/Bluesky" unique_id=895037592]
+position = Vector2(100, 90)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("9_b5buf")
+
+[node name="X" type="TextureButton" parent="Control/Buttons_1" unique_id=104681989]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_tjwe2")
+
+[node name="Text" type="RichTextLabel" parent="Control/Buttons_1/X" unique_id=2036249342]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.2888184e-05
+offset_bottom = -3.0517578e-05
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/normal_font = ExtResource("4_tjwe2")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Twitter"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="Control/Buttons_1/X" unique_id=723602870]
+position = Vector2(100, 90)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("9_dm208")
+
+[connection signal="pressed" from="Control/Buttons_1/Discord" to="." method="_on_discord_pressed"]
+[connection signal="pressed" from="Control/Buttons_1/Youtube" to="." method="_on_youtube_pressed"]
+[connection signal="pressed" from="Control/Buttons_1/Instagram" to="." method="_on_instagram_pressed"]
+[connection signal="pressed" from="Control/Buttons_1/Bluesky" to="." method="_on_bluesky_pressed"]
+[connection signal="pressed" from="Control/Buttons_1/X" to="." method="_on_x_pressed"]
