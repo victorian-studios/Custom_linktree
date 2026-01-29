@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6elerbji5xl8"
-path="res://.godot/imported/d238146fc3a2b6b70c792b5c55d91584-traco-em-forma-de-retangulo.png-992c7685932c68f26135460327c7ebbf.ctex"
+uid="uid://d7law7ybx17k"
+path="res://.godot/imported/gear.png-bfbde7b96b1ea50aacdac89b76607817.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main scene/Images/d238146fc3a2b6b70c792b5c55d91584-traco-em-forma-de-retangulo.png"
-dest_files=["res://.godot/imported/d238146fc3a2b6b70c792b5c55d91584-traco-em-forma-de-retangulo.png-992c7685932c68f26135460327c7ebbf.ctex"]
+source_file="res://Main scene/Images/gear.png"
+dest_files=["res://.godot/imported/gear.png-bfbde7b96b1ea50aacdac89b76607817.ctex"]
 
 [params]
 

@@ -25,7 +25,10 @@ window/stretch/mode="viewport"
 
 folder_colors={
 "res://Main scene/": "red",
+"res://Main scene/Fonts/": "gray",
 "res://Main scene/Images/": "blue",
+"res://Main scene/Scripts/": "purple",
+"res://Main scene/Shaders/": "yellow",
 "res://Main scene/Videos and gifs/": "orange"
 }
 

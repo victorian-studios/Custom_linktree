@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sfh2j8dfkd2v"
-path="res://.godot/imported/blue-neon-button-glowing-neon-button-png.png-f0496a317c362f287e2438444b810087.ctex"
+uid="uid://ergtttpq01vd"
+path="res://.godot/imported/bluesky-blue-round-circle-logo-24461.png-8f4addf0e3a4aa47a0015b5e60313254.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main scene/Images/blue-neon-button-glowing-neon-button-png.png"
-dest_files=["res://.godot/imported/blue-neon-button-glowing-neon-button-png.png-f0496a317c362f287e2438444b810087.ctex"]
+source_file="res://Main scene/Images/bluesky-blue-round-circle-logo-24461.png"
+dest_files=["res://.godot/imported/bluesky-blue-round-circle-logo-24461.png-8f4addf0e3a4aa47a0015b5e60313254.ctex"]
 
 [params]
 
