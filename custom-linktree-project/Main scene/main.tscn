@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://d33lo87kdxk4s"]
 
 [ext_resource type="Script" uid="uid://btiosjh5a2s2y" path="res://Main scene/Scripts/main.gd" id="1_g3q3t"]
-[ext_resource type="Texture2D" uid="uid://d7law7ybx17k" path="res://Main scene/Images/gear.png" id="2_b5buf"]
-[ext_resource type="Shader" uid="uid://cgfahdvteagtf" path="res://Main scene/Shaders/BG_shader.gdshader" id="2_dm208"]
+[ext_resource type="PackedScene" uid="uid://dh4cd1arj41st" path="res://Main scene/bg.tscn" id="2_dm208"]
 [ext_resource type="Texture2D" uid="uid://bf4h4odpvas27" path="res://Main scene/Images/button.png" id="3_tjwe2"]
 [ext_resource type="Texture2D" uid="uid://dj1d316q35yv" path="res://Main scene/Images/logo preta.png" id="3_xmgng"]
+[ext_resource type="Texture2D" uid="uid://rj0slvhlp4n0" path="res://Main scene/Images/BG_linktree.png" id="4_bisoy"]
 [ext_resource type="FontFile" uid="uid://beonso1q1xkiu" path="res://Main scene/Fonts/Century Gothic.ttf" id="4_tjwe2"]
 [ext_resource type="Texture2D" uid="uid://xq840kj1hgu5" path="res://Main scene/Images/icon_discord.png" id="7_b5buf"]
 [ext_resource type="Texture2D" uid="uid://1xp28bdnoc3y" path="res://Main scene/Images/youtube_3670147.png" id="7_dm208"]
@@ -12,20 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://ergtttpq01vd" path="res://Main scene/Images/bluesky-blue-round-circle-logo-24461.png" id="9_b5buf"]
 [ext_resource type="Texture2D" uid="uid://cx5rj6umr3wah" path="res://Main scene/Images/icon_twitter.png" id="9_dm208"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bisoy"]
-shader = ExtResource("2_dm208")
-shader_parameter/tile = Vector2(10, 10)
-shader_parameter/offset = Vector2(-0.2, -0.2)
-
 [node name="Node2D" type="Node2D" unique_id=1594328892]
 script = ExtResource("1_g3q3t")
 
-[node name="BG" type="Sprite2D" parent="." unique_id=1614467438]
-texture_repeat = 2
-material = SubResource("ShaderMaterial_bisoy")
+[node name="BG" parent="." unique_id=281444924 instance=ExtResource("2_dm208")]
 position = Vector2(961.87494, 1047.6443)
-scale = Vector2(15.660568, 15.66057)
-texture = ExtResource("2_b5buf")
 
 [node name="Control" type="Control" parent="." unique_id=252080680]
 layout_mode = 3
@@ -37,26 +28,35 @@ offset_bottom = 103.0
 size_flags_horizontal = 0
 mouse_filter = 2
 
+[node name="BG_Linktree" type="Sprite2D" parent="Control" unique_id=1559901381]
+position = Vector2(115, 407)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("4_bisoy")
+
 [node name="Logo" type="Sprite2D" parent="Control" unique_id=1990773879]
-position = Vector2(141, 191)
+position = Vector2(128, 191)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_xmgng")
 
-[node name="Buttons_1" type="FlowContainer" parent="Control" unique_id=1885972550]
-layout_mode = 1
-offset_top = 388.0
-offset_right = 800.0
-offset_bottom = 1568.0
-scale = Vector2(0.3, 0.3)
-theme_override_constants/h_separation = 70
-theme_override_constants/v_separation = 70
+[node name="ScrollContainer" type="ScrollContainer" parent="Control" unique_id=1550535900]
+layout_mode = 0
+offset_left = -96.0
+offset_top = 369.0
+offset_right = 330.0
+offset_bottom = 844.0
 
-[node name="Discord" type="TextureButton" parent="Control/Buttons_1" unique_id=1038922078]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ScrollContainer" unique_id=164218198]
 layout_mode = 2
+size_flags_vertical = 0
+
+[node name="SurvivorStory" type="TextureButton" parent="Control/ScrollContainer/VBoxContainer" unique_id=211987489]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("3_tjwe2")
 
-[node name="Text" type="RichTextLabel" parent="Control/Buttons_1/Discord" unique_id=1394229205]
+[node name="Text" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer/SurvivorStory" unique_id=982667156]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -72,17 +72,18 @@ text = "Discord"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Icon" type="Sprite2D" parent="Control/Buttons_1/Discord" unique_id=1852855630]
+[node name="Icon" type="Sprite2D" parent="Control/ScrollContainer/VBoxContainer/SurvivorStory" unique_id=1760132691]
 position = Vector2(100, 90)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("7_b5buf")
 
-[node name="Youtube" type="TextureButton" parent="Control/Buttons_1" unique_id=541352908]
+[node name="SteamClicks" type="TextureButton" parent="Control/ScrollContainer/VBoxContainer" unique_id=1337097700]
 layout_mode = 2
+size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("3_tjwe2")
 
-[node name="Text" type="RichTextLabel" parent="Control/Buttons_1/Youtube" unique_id=207968702]
+[node name="Text" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer/SteamClicks" unique_id=720538095]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -100,17 +101,18 @@ text = "Youtube"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Icon" type="Sprite2D" parent="Control/Buttons_1/Youtube" unique_id=364241006]
+[node name="Icon" type="Sprite2D" parent="Control/ScrollContainer/VBoxContainer/SteamClicks" unique_id=350679019]
 position = Vector2(100, 90)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("7_dm208")
 
-[node name="Instagram" type="TextureButton" parent="Control/Buttons_1" unique_id=619412153]
+[node name="Wonderjack" type="TextureButton" parent="Control/ScrollContainer/VBoxContainer" unique_id=2050407714]
 layout_mode = 2
+size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("3_tjwe2")
 
-[node name="Text" type="RichTextLabel" parent="Control/Buttons_1/Instagram" unique_id=1893692295]
+[node name="Text" type="RichTextLabel" parent="Control/ScrollContainer/VBoxContainer/Wonderjack" unique_id=185513378]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -128,17 +130,218 @@ text = "Instagram"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Icon" type="Sprite2D" parent="Control/Buttons_1/Instagram" unique_id=636146197]
+[node name="Icon" type="Sprite2D" parent="Control/ScrollContainer/VBoxContainer/Wonderjack" unique_id=1173310405]
 position = Vector2(100, 90)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("8_bisoy")
 
-[node name="Bluesky" type="TextureButton" parent="Control/Buttons_1" unique_id=1877257242]
+[node name="GamesList" type="Control" parent="Control" unique_id=1134129880]
+anchors_preset = 0
+offset_left = -665.0
+offset_top = 486.0
+offset_right = -379.0
+offset_bottom = 788.0
+
+[node name="Game" type="RichTextLabel" parent="Control/GamesList" unique_id=611832845]
+layout_mode = 0
+offset_right = 279.0
+offset_bottom = 63.0
+theme_override_fonts/normal_font = ExtResource("4_tjwe2")
+theme_override_font_sizes/normal_font_size = 40
+text = "Nossos Jogos:"
+
+[node name="Games" type="FlowContainer" parent="Control/GamesList" unique_id=1322485279]
+layout_mode = 1
+offset_top = 64.0
+offset_right = 800.0
+offset_bottom = 797.33325
+scale = Vector2(0.3, 0.3)
+theme_override_constants/h_separation = 70
+theme_override_constants/v_separation = 70
+alignment = 1
+last_wrap_alignment = 2
+vertical = true
+
+[node name="SurvivorStory" type="TextureButton" parent="Control/GamesList/Games" unique_id=606931100]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("3_tjwe2")
 
-[node name="Text" type="RichTextLabel" parent="Control/Buttons_1/Bluesky" unique_id=590701145]
+[node name="Text" type="RichTextLabel" parent="Control/GamesList/Games/SurvivorStory" unique_id=1727287504]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 176.6665
+offset_right = -246.66675
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/normal_font = ExtResource("4_tjwe2")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Discord"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="Control/GamesList/Games/SurvivorStory" unique_id=1002569764]
+position = Vector2(100, 90)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_b5buf")
+
+[node name="SteamClicks" type="TextureButton" parent="Control/GamesList/Games" unique_id=2083121916]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_tjwe2")
+
+[node name="Text" type="RichTextLabel" parent="Control/GamesList/Games/SteamClicks" unique_id=920964816]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 176.6665
+offset_top = 1.5258789e-05
+offset_right = -200.0
+offset_bottom = 1.5258789e-05
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/normal_font = ExtResource("4_tjwe2")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Youtube"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="Control/GamesList/Games/SteamClicks" unique_id=392686118]
+position = Vector2(100, 90)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_dm208")
+
+[node name="Wonderjack" type="TextureButton" parent="Control/GamesList/Games" unique_id=493558898]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_tjwe2")
+
+[node name="Text" type="RichTextLabel" parent="Control/GamesList/Games/Wonderjack" unique_id=327948468]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 176.6665
+offset_top = 1.5258789e-05
+offset_right = -130.0
+offset_bottom = 1.5258789e-05
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/normal_font = ExtResource("4_tjwe2")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Instagram"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="Control/GamesList/Games/Wonderjack" unique_id=1895125562]
+position = Vector2(100, 90)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_bisoy")
+
+[node name="SocialMedias" type="FlowContainer" parent="Control" unique_id=1885972550]
+layout_mode = 1
+offset_left = 559.0
+offset_top = 524.0
+offset_right = 1359.0
+offset_bottom = 1704.0
+scale = Vector2(0.3, 0.3)
+theme_override_constants/h_separation = 70
+theme_override_constants/v_separation = 70
+
+[node name="Discord" type="TextureButton" parent="Control/SocialMedias" unique_id=1038922078]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_tjwe2")
+
+[node name="Text" type="RichTextLabel" parent="Control/SocialMedias/Discord" unique_id=1394229205]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 176.6665
+offset_right = -246.66675
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/normal_font = ExtResource("4_tjwe2")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Discord"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="Control/SocialMedias/Discord" unique_id=1852855630]
+position = Vector2(100, 90)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_b5buf")
+
+[node name="Youtube" type="TextureButton" parent="Control/SocialMedias" unique_id=541352908]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_tjwe2")
+
+[node name="Text" type="RichTextLabel" parent="Control/SocialMedias/Youtube" unique_id=207968702]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 176.6665
+offset_top = 1.5258789e-05
+offset_right = -200.0
+offset_bottom = 1.5258789e-05
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/normal_font = ExtResource("4_tjwe2")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Youtube"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="Control/SocialMedias/Youtube" unique_id=364241006]
+position = Vector2(100, 90)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_dm208")
+
+[node name="Instagram" type="TextureButton" parent="Control/SocialMedias" unique_id=619412153]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_tjwe2")
+
+[node name="Text" type="RichTextLabel" parent="Control/SocialMedias/Instagram" unique_id=1893692295]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 176.6665
+offset_top = 1.5258789e-05
+offset_right = -130.0
+offset_bottom = 1.5258789e-05
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/normal_font = ExtResource("4_tjwe2")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Instagram"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="Control/SocialMedias/Instagram" unique_id=636146197]
+position = Vector2(100, 90)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_bisoy")
+
+[node name="Bluesky" type="TextureButton" parent="Control/SocialMedias" unique_id=1877257242]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_tjwe2")
+
+[node name="Text" type="RichTextLabel" parent="Control/SocialMedias/Bluesky" unique_id=590701145]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -156,17 +359,17 @@ text = "Bluesky"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Icon" type="Sprite2D" parent="Control/Buttons_1/Bluesky" unique_id=895037592]
+[node name="Icon" type="Sprite2D" parent="Control/SocialMedias/Bluesky" unique_id=895037592]
 position = Vector2(100, 90)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("9_b5buf")
 
-[node name="X" type="TextureButton" parent="Control/Buttons_1" unique_id=104681989]
+[node name="X" type="TextureButton" parent="Control/SocialMedias" unique_id=104681989]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("3_tjwe2")
 
-[node name="Text" type="RichTextLabel" parent="Control/Buttons_1/X" unique_id=2036249342]
+[node name="Text" type="RichTextLabel" parent="Control/SocialMedias/X" unique_id=2036249342]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -184,13 +387,28 @@ text = "Twitter"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Icon" type="Sprite2D" parent="Control/Buttons_1/X" unique_id=723602870]
+[node name="Icon" type="Sprite2D" parent="Control/SocialMedias/X" unique_id=723602870]
 position = Vector2(100, 90)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("9_dm208")
 
-[connection signal="pressed" from="Control/Buttons_1/Discord" to="." method="_on_discord_pressed"]
-[connection signal="pressed" from="Control/Buttons_1/Youtube" to="." method="_on_youtube_pressed"]
-[connection signal="pressed" from="Control/Buttons_1/Instagram" to="." method="_on_instagram_pressed"]
-[connection signal="pressed" from="Control/Buttons_1/Bluesky" to="." method="_on_bluesky_pressed"]
-[connection signal="pressed" from="Control/Buttons_1/X" to="." method="_on_x_pressed"]
+[node name="SocialMediaList" type="Control" parent="Control" unique_id=785899967]
+anchors_preset = 0
+offset_left = 559.0
+offset_top = 460.0
+offset_right = 990.0
+offset_bottom = 878.0
+
+[node name="SocialMedia" type="RichTextLabel" parent="Control/SocialMediaList" unique_id=1775418118]
+layout_mode = 0
+offset_right = 421.0
+offset_bottom = 61.0
+theme_override_fonts/normal_font = ExtResource("4_tjwe2")
+theme_override_font_sizes/normal_font_size = 40
+text = "Nossas Redes Sociais:"
+
+[connection signal="pressed" from="Control/SocialMedias/Discord" to="." method="_on_discord_pressed"]
+[connection signal="pressed" from="Control/SocialMedias/Youtube" to="." method="_on_youtube_pressed"]
+[connection signal="pressed" from="Control/SocialMedias/Instagram" to="." method="_on_instagram_pressed"]
+[connection signal="pressed" from="Control/SocialMedias/Bluesky" to="." method="_on_bluesky_pressed"]
+[connection signal="pressed" from="Control/SocialMedias/X" to="." method="_on_x_pressed"]

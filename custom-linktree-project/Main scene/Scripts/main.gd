@@ -13,7 +13,7 @@ extends Node2D
 @export var link_wonderjack = "https://www.youtube.com/@VictorianStudioOfficial"
 
 func _ready():
-	for button in $Control/Buttons_1.get_children():
+	for button in $Control/SocialMedias.get_children():
 		button.connect("mouse_entered", Callable(self, "_on_button_hovered").bind(button))
 		button.connect("mouse_exited", Callable(self, "_on_button_exited").bind(button))
 

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dh4cd1arj41st"]
+
+[ext_resource type="Shader" uid="uid://cgfahdvteagtf" path="res://Main scene/Shaders/BG_shader.gdshader" id="1_ogele"]
+[ext_resource type="Texture2D" uid="uid://d7law7ybx17k" path="res://Main scene/Images/gear.png" id="2_6xf4j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bisoy"]
+shader = ExtResource("1_ogele")
+shader_parameter/tile = Vector2(10, 10)
+shader_parameter/offset = Vector2(-0.2, -0.2)
+
+[node name="BG" type="Sprite2D" unique_id=281444924]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_bisoy")
+scale = Vector2(15.660568, 15.66057)
+texture = ExtResource("2_6xf4j")

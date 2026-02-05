@@ -1,0 +1,546 @@
+[gd_scene format=3 uid="uid://cct1vrexl6ct0"]
+
+[ext_resource type="Script" uid="uid://cv4jdqhjpjfte" path="res://Main scene/Scripts/main_2.gd" id="1_s3hy6"]
+[ext_resource type="PackedScene" uid="uid://dh4cd1arj41st" path="res://Main scene/bg.tscn" id="2_o4irf"]
+[ext_resource type="Texture2D" uid="uid://rj0slvhlp4n0" path="res://Main scene/Images/BG_linktree.png" id="4_2gok7"]
+[ext_resource type="Texture2D" uid="uid://dj1d316q35yv" path="res://Main scene/Images/logo preta.png" id="5_xbhlu"]
+[ext_resource type="Texture2D" uid="uid://bf4h4odpvas27" path="res://Main scene/Images/button.png" id="6_bqx4i"]
+[ext_resource type="FontFile" uid="uid://beonso1q1xkiu" path="res://Main scene/Fonts/Century Gothic.ttf" id="7_os0a2"]
+
+[node name="ControlMain" type="Control" unique_id=1516402191]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 606.0
+offset_right = -537.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_s3hy6")
+
+[node name="BG" parent="." unique_id=281444924 instance=ExtResource("2_o4irf")]
+position = Vector2(357, 1049)
+
+[node name="ControlLinks" type="Control" parent="." unique_id=1419279533]
+layout_mode = 1
+anchor_left = -0.044000003
+anchor_right = 0.95600003
+anchor_bottom = 1.0
+offset_left = 0.18803406
+offset_right = -106.98364
+offset_bottom = -148.96448
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1599988, 1.1599988)
+
+[node name="BGLinktree" type="TextureRect" parent="ControlLinks" unique_id=2085448769]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -450.0
+offset_right = 225.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_2gok7")
+
+[node name="Logo" type="TextureRect" parent="ControlLinks" unique_id=905563768]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.179
+anchor_top = 0.034
+anchor_right = 0.822
+anchor_bottom = 0.545
+offset_left = 147.34238
+offset_top = 56.27592
+offset_right = 66.64276
+offset_bottom = 80.516785
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_xbhlu")
+
+[node name="Desc" type="RichTextLabel" parent="ControlLinks" unique_id=1809896920]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.86227
+offset_top = -176.72433
+offset_right = 200.8623
+offset_bottom = -98.724335
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("7_os0a2")
+theme_override_font_sizes/normal_font_size = 20
+text = "Brazilian based game studio, which aims to entertain people with our creations."
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Screens" type="Control" parent="ControlLinks" unique_id=1433525037]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -70.689735
+offset_bottom = -70.68976
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GamesControl" type="Control" parent="ControlLinks/Screens" unique_id=1046807587]
+visible = false
+layout_mode = 1
+anchor_top = 0.035
+anchor_right = 1.001
+anchor_bottom = 0.966
+offset_top = 0.34482574
+offset_right = -0.33648682
+offset_bottom = 0.3791504
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GamesTitle" type="RichTextLabel" parent="ControlLinks/Screens/GamesControl" unique_id=608252007]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -14.655212
+offset_right = 225.0
+offset_bottom = 48.344788
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("7_os0a2")
+theme_override_font_sizes/normal_font_size = 45
+text = "Games"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollGames" type="ScrollContainer" parent="ControlLinks/Screens/GamesControl" unique_id=1886709773]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.18900001
+anchor_top = 0.564
+anchor_right = 0.79
+anchor_bottom = 0.98600006
+offset_left = -8.55658
+offset_top = 1.4541321
+offset_right = 20.573181
+offset_bottom = 2.0325317
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlLinks/Screens/GamesControl/ScrollGames" unique_id=1857565268]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 30
+
+[node name="SurvivorStory" type="Button" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer" unique_id=1931125998]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 5
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 78
+flat = true
+
+[node name="BG" type="TextureRect" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer/SurvivorStory" unique_id=163373380]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_bqx4i")
+expand_mode = 2
+
+[node name="Text" type="RichTextLabel" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer/SurvivorStory" unique_id=1730659301]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("7_os0a2")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Survivor Story: The Apocalypse"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SteamClicks" type="Button" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer" unique_id=2141210756]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 5
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 78
+flat = true
+
+[node name="BG" type="TextureRect" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer/SteamClicks" unique_id=1774311879]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_bqx4i")
+expand_mode = 2
+
+[node name="Text" type="RichTextLabel" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer/SteamClicks" unique_id=823911870]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("7_os0a2")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Steam & Clicks"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Wonderjack" type="Button" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer" unique_id=1882228840]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 5
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 78
+flat = true
+
+[node name="BG" type="TextureRect" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer/Wonderjack" unique_id=1225532265]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_bqx4i")
+expand_mode = 2
+
+[node name="Text" type="RichTextLabel" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer/Wonderjack" unique_id=270685069]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("7_os0a2")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Wonderjack"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SocialMediasControl" type="Control" parent="ControlLinks/Screens" unique_id=1675484808]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SocialMedias" type="RichTextLabel" parent="ControlLinks/Screens/SocialMediasControl" unique_id=1385320455]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -24.13797
+offset_right = 225.0
+offset_bottom = 38.86203
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("7_os0a2")
+theme_override_font_sizes/normal_font_size = 45
+text = "Social Medias"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollSocialMedias" type="ScrollContainer" parent="ControlLinks/Screens/SocialMediasControl" unique_id=1838371666]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.21100001
+anchor_right = 0.79
+anchor_bottom = 0.9480001
+offset_left = -10.299179
+offset_top = 523.2764
+offset_right = 10.491333
+offset_bottom = 7.0343018
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias" unique_id=1958086503]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 30
+
+[node name="Discord" type="Button" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer" unique_id=646253926]
+custom_minimum_size = Vector2(350, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 5
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 78
+flat = true
+
+[node name="BG" type="TextureRect" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Discord" unique_id=1272376141]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_bqx4i")
+expand_mode = 2
+
+[node name="Text" type="RichTextLabel" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Discord" unique_id=1408281020]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("7_os0a2")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Discord"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Youtube" type="Button" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer" unique_id=187223986]
+custom_minimum_size = Vector2(350, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 5
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 78
+flat = true
+
+[node name="BG" type="TextureRect" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Youtube" unique_id=176740633]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_bqx4i")
+expand_mode = 2
+
+[node name="Text" type="RichTextLabel" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Youtube" unique_id=458361081]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("7_os0a2")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Youtube"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Itchio" type="Button" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer" unique_id=354677670]
+custom_minimum_size = Vector2(350, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 5
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 78
+flat = true
+
+[node name="BG" type="TextureRect" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Itchio" unique_id=1999494284]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_bqx4i")
+expand_mode = 2
+
+[node name="Text" type="RichTextLabel" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Itchio" unique_id=1192010337]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("7_os0a2")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Itchio"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Instagram" type="Button" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer" unique_id=607856464]
+custom_minimum_size = Vector2(350, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 5
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 78
+flat = true
+
+[node name="BG" type="TextureRect" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Instagram" unique_id=480180848]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_bqx4i")
+expand_mode = 2
+
+[node name="Text" type="RichTextLabel" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Instagram" unique_id=1057860244]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("7_os0a2")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Instagram"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bluesky" type="Button" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer" unique_id=1832319241]
+custom_minimum_size = Vector2(350, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 5
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 78
+flat = true
+
+[node name="BG" type="TextureRect" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Bluesky" unique_id=1008403756]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_bqx4i")
+expand_mode = 2
+
+[node name="Text" type="RichTextLabel" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Bluesky" unique_id=410913136]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("7_os0a2")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Bluesky"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Twiter" type="Button" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer" unique_id=867976987]
+custom_minimum_size = Vector2(350, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 5
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 78
+flat = true
+
+[node name="BG" type="TextureRect" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Twiter" unique_id=159087464]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_bqx4i")
+expand_mode = 2
+
+[node name="Text" type="RichTextLabel" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Twiter" unique_id=1974625965]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("7_os0a2")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Twiter"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Right" type="Button" parent="ControlLinks" unique_id=1326356889]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 168.5346
+offset_top = -75.3967
+offset_right = 208.53467
+offset_bottom = -35.396698
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+mouse_default_cursor_shape = 2
+text = ">"
+
+[node name="Left" type="Button" parent="ControlLinks" unique_id=500448070]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.6037
+offset_top = -75.3967
+offset_right = -165.6037
+offset_bottom = -35.396698
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+mouse_default_cursor_shape = 2
+text = "<"
+
+[connection signal="pressed" from="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer/SurvivorStory" to="." method="_on_survivor_story_pressed"]
+[connection signal="pressed" from="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer/SteamClicks" to="." method="_on_steam_clicks_pressed"]
+[connection signal="pressed" from="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer/Wonderjack" to="." method="_on_wonderjack_pressed"]
+[connection signal="pressed" from="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Discord" to="." method="_on_discord_pressed"]
+[connection signal="pressed" from="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Youtube" to="." method="_on_youtube_pressed"]
+[connection signal="pressed" from="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Itchio" to="." method="_on_itchio_pressed"]
+[connection signal="pressed" from="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Instagram" to="." method="_on_instagram_pressed"]
+[connection signal="pressed" from="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Bluesky" to="." method="_on_bluesky_pressed"]
+[connection signal="pressed" from="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Twiter" to="." method="_on_twiter_pressed"]
+[connection signal="pressed" from="ControlLinks/Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="ControlLinks/Left" to="." method="_on_left_pressed"]
