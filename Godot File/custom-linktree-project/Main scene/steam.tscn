@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://con3wrdlh0gk"]
+
+[ext_resource type="Texture2D" uid="uid://jdtnaeruep16" path="res://Main scene/Images/o_vapor_mais_lindo_que_voce_vera_hoje.png" id="1_n1ms0"]
+
+[sub_resource type="Curve" id="Curve_k26x5"]
+_data = [Vector2(0, 0.19101131), 0.0, 0.0, 0, 0, Vector2(0.5602409, 0.30337077), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_2gok7"]
+curve = SubResource("Curve_k26x5")
+
+[sub_resource type="Curve" id="Curve_n1ms0"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -0.6629214), 0.0, 0.0, 0, 0, Vector2(1e-05, 0.6853932), 0.0, 0.0, 0, 0, Vector2(1, -0.50561786), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_45utl"]
+curve = SubResource("Curve_n1ms0")
+
+[sub_resource type="Curve" id="Curve_xbhlu"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -0.48314607), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_bqx4i"]
+curve = SubResource("Curve_xbhlu")
+
+[sub_resource type="Curve" id="Curve_os0a2"]
+_data = [Vector2(0, 0.011235952), 0.0, 0.0, 0, 0, Vector2(0.9939759, 0.15730333), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_edbv4"]
+curve = SubResource("Curve_os0a2")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4ptpv"]
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(50, 1, 1)
+angle_min = 45.00001
+angle_max = 180.00002
+angle_curve = SubResource("CurveTexture_45utl")
+initial_velocity_min = -5.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, -20, 0)
+linear_accel_min = -10.000002
+linear_accel_max = -5.000002
+linear_accel_curve = SubResource("CurveTexture_bqx4i")
+scale_max = 10.0
+scale_curve = SubResource("CurveTexture_edbv4")
+alpha_curve = SubResource("CurveTexture_2gok7")
+
+[node name="Steam" type="GPUParticles2D" unique_id=267767688]
+amount = 150
+texture = ExtResource("1_n1ms0")
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_4ptpv")
