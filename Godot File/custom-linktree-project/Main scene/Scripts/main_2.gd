@@ -22,8 +22,9 @@ extends Control
 @export var buttons_effects = []
 
 func _ready():
-	OS.alert("socorro")
-	OS.alert(str(DisplayServer.screen_get_orientation()))
+	var size := get_viewport().get_visible_rect().size
+	if size.y > size.x:
+		OS.alert("socorro!!!")
 	# if DisplayServer.screen_get_orientation() == DisplayServer.SCREEN_PORTRAIT:
 	# 	OS.alert(str(DisplayServer.screen_get_orientation()))
 	# else:
