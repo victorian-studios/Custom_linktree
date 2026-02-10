@@ -24,6 +24,8 @@ extends Control
 func _ready():
 	if DisplayServer.screen_get_orientation() == DisplayServer.SCREEN_PORTRAIT:
 		OS.alert("VIRA")
+	else:
+		OS.alert("SOCORRO")
 	var is_mobile := OS.has_feature("web_android")
 	
 	if is_mobile:

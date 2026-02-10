@@ -709,14 +709,14 @@ scale = Vector2(0.15, 0.15)
 texture = ExtResource("7_h6hcb")
 
 [node name="MarkerLeafs" type="Marker2D" parent="." unique_id=233325979]
-position = Vector2(270, 775.99994)
+position = Vector2(270, 747.01996)
 scale = Vector2(1.1019988, 1.1019988)
 
 [node name="MarkerSteam" type="Marker2D" parent="." unique_id=1692580521]
-position = Vector2(206, 864)
+position = Vector2(206, 840)
 
 [node name="MarkerClicks" type="Marker2D" parent="." unique_id=27939854]
-position = Vector2(350, 856)
+position = Vector2(350, 827.02)
 
 [connection signal="pressed" from="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer/SurvivorStory" to="." method="_on_survivor_story_pressed"]
 [connection signal="pressed" from="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer/SteamClicks" to="." method="_on_steam_clicks_pressed"]
