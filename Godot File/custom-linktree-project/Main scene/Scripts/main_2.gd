@@ -23,6 +23,7 @@ extends Control
 
 func _ready():
 	var size := get_viewport().get_visible_rect().size
+	OS.alert(str(size))
 	if size.y > size.x:
 		OS.alert("socorro!!!")
 	# if DisplayServer.screen_get_orientation() == DisplayServer.SCREEN_PORTRAIT:
