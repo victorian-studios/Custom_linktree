@@ -22,15 +22,16 @@ extends Control
 @export var buttons_effects = []
 
 func _ready():
-	if DisplayServer.screen_get_orientation() == DisplayServer.SCREEN_PORTRAIT:
-		OS.alert("VIRA")
-	else:
-		OS.alert("SOCORRO")
-	var is_mobile := OS.has_feature("web_android")
+	OS.alert(str(DisplayServer.screen_get_orientation()))
+	# if DisplayServer.screen_get_orientation() == DisplayServer.SCREEN_PORTRAIT:
+	# 	OS.alert(str(DisplayServer.screen_get_orientation()))
+	# else:
+	# 	OS.alert("SOCORRO")
+	# var is_mobile := OS.has_feature("web_android")
 	
-	if is_mobile:
-		OS.alert("VIRA2")
-		# get_window().size = Vector2i(400, 1080)
+	# if is_mobile:
+	# 	pass
+	# 	# get_window().size = Vector2i(400, 1080)
 
 	for button in $ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer.get_children():
 		if !button.disabled:
