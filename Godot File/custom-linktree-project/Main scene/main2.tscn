@@ -134,6 +134,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Screens" type="Control" parent="ControlLinks" unique_id=1433525037]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
