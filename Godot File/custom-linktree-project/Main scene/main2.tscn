@@ -14,11 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://con3wrdlh0gk" path="res://Main scene/steam.tscn" id="10_2mccm"]
 [ext_resource type="Texture2D" uid="uid://m7sl23sm0apm" path="res://Main scene/Images/fred.png" id="11_edbv4"]
 [ext_resource type="PackedScene" uid="uid://vnq33lidtd6i" path="res://Main scene/shine.tscn" id="12_t5xxh"]
-[ext_resource type="Texture2D" uid="uid://dyxvg2p8ank3p" path="res://Main scene/Images/itch_icon_146025.webp" id="13_2gok7"]
 [ext_resource type="Texture2D" uid="uid://gi08enddecoh" path="res://Main scene/Images/wood_armor.png" id="13_slgw0"]
 [ext_resource type="Texture2D" uid="uid://tc7x74f3f216" path="res://Main scene/Images/instagram.png" id="14_xbhlu"]
 [ext_resource type="Texture2D" uid="uid://ergtttpq01vd" path="res://Main scene/Images/bluesky-blue-round-circle-logo-24461.png" id="15_bqx4i"]
 [ext_resource type="Texture2D" uid="uid://c7n3o6nwm1ca6" path="res://Main scene/Images/GATO FINAL.png" id="15_qg15s"]
+[ext_resource type="Texture2D" uid="uid://bxsu3vhlets3o" path="res://Main scene/Images/itchio.png" id="17_edbv4"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_t5xxh"]
 
@@ -603,7 +603,7 @@ vertical_alignment = 1
 [node name="Icon" type="Sprite2D" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Itchio" unique_id=997212928]
 position = Vector2(53.965607, 50.000053)
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("13_2gok7")
+texture = ExtResource("17_edbv4")
 
 [node name="Instagram" type="Button" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer" unique_id=607856464]
 custom_minimum_size = Vector2(370, 100)
