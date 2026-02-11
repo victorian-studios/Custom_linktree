@@ -41,7 +41,7 @@ func verify_screen_size():
 	if size.y > size.x:
 		$ScreenBloqued.visble = true
 	else:
-		$ScreenBloqued.visble = true
+		$ScreenBloqued.visble = false
 
 func _on_survivor_story_pressed():
 	OS.shell_open(link_survivor_story)
