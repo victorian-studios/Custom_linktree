@@ -22,7 +22,7 @@ extends Control
 @export var buttons_effects = []
 
 func _ready():
-	var size := get_viewport().get_visible_rect().size
+	var size := DisplayServer.window_get_size()
 	OS.alert(str(size))
 	if size.y > size.x:
 		OS.alert("socorro!!!")
