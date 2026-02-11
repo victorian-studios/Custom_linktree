@@ -8,10 +8,17 @@
 [ext_resource type="Texture2D" uid="uid://bf4h4odpvas27" path="res://Main scene/Images/button.png" id="6_bqx4i"]
 [ext_resource type="Texture2D" uid="uid://cx5rj6umr3wah" path="res://Main scene/Images/icon_twitter.png" id="7_h6hcb"]
 [ext_resource type="FontFile" uid="uid://beonso1q1xkiu" path="res://Main scene/Fonts/Century Gothic.ttf" id="7_os0a2"]
+[ext_resource type="Texture2D" uid="uid://dj1d316q35yv" path="res://Main scene/Images/logo preta.png" id="7_xbhlu"]
 [ext_resource type="Texture2D" uid="uid://xq840kj1hgu5" path="res://Main scene/Images/icon_discord.png" id="8_4ptpv"]
 [ext_resource type="Texture2D" uid="uid://1xp28bdnoc3y" path="res://Main scene/Images/youtube_3670147.png" id="8_cuf1r"]
 [ext_resource type="PackedScene" uid="uid://con3wrdlh0gk" path="res://Main scene/steam.tscn" id="10_2mccm"]
+[ext_resource type="Texture2D" uid="uid://m7sl23sm0apm" path="res://Main scene/Images/fred.png" id="11_edbv4"]
 [ext_resource type="PackedScene" uid="uid://vnq33lidtd6i" path="res://Main scene/shine.tscn" id="12_t5xxh"]
+[ext_resource type="Texture2D" uid="uid://dyxvg2p8ank3p" path="res://Main scene/Images/itch_icon_146025.webp" id="13_2gok7"]
+[ext_resource type="Texture2D" uid="uid://gi08enddecoh" path="res://Main scene/Images/wood_armor.png" id="13_slgw0"]
+[ext_resource type="Texture2D" uid="uid://tc7x74f3f216" path="res://Main scene/Images/instagram.png" id="14_xbhlu"]
+[ext_resource type="Texture2D" uid="uid://ergtttpq01vd" path="res://Main scene/Images/bluesky-blue-round-circle-logo-24461.png" id="15_bqx4i"]
+[ext_resource type="Texture2D" uid="uid://c7n3o6nwm1ca6" path="res://Main scene/Images/GATO FINAL.png" id="15_qg15s"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_t5xxh"]
 
@@ -52,12 +59,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -788.363
-offset_top = -450.0
-offset_right = -338.36298
-offset_bottom = 450.0
+offset_left = -809.9147
+offset_top = -458.62122
+offset_right = 1110.0853
+offset_bottom = 621.3787
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.84, 0.84)
 texture = ExtResource("4_2gok7")
 
 [node name="Logo" type="TextureRect" parent="ControlLinks" unique_id=905563768]
@@ -68,13 +76,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -133.18982
-offset_top = -437.93152
+offset_top = -417.24185
 offset_right = 378.81018
-offset_bottom = 74.06848
+offset_bottom = 94.75812
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_4ptpv")
+texture = ExtResource("7_xbhlu")
 
 [node name="Title1" type="RichTextLabel" parent="ControlLinks" unique_id=616294166]
 layout_mode = 1
@@ -84,9 +92,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -481.4661
-offset_top = -205.17267
+offset_top = -189.6554
 offset_right = 474.56946
-offset_bottom = -93.10361
+offset_bottom = -77.586334
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("5_4ptpv")
@@ -103,9 +111,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -94.39673
-offset_top = -122.41397
+offset_top = -106.8967
 offset_right = 86.638
-offset_bottom = -72.41394
+offset_bottom = -56.896667
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("7_os0a2")
@@ -124,7 +132,7 @@ anchor_bottom = 0.5
 offset_left = -719.39734
 offset_top = -58.620758
 offset_right = 732.32837
-offset_bottom = -1.7241211
+offset_bottom = -1.7240906
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -151,6 +159,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 58.07628
 offset_right = -871.1443
 grow_horizontal = 2
 grow_vertical = 2
@@ -160,8 +169,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 529.9461
-offset_bottom = -387.09125
+offset_top = 522.6866
+offset_bottom = -394.35077
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -174,11 +183,11 @@ vertical_alignment = 1
 
 [node name="ScrollGames" type="ScrollContainer" parent="ControlLinks/Screens/GamesControl" unique_id=1370304448]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 592.9461
-offset_bottom = -24.11444
+anchor_bottom = 0.96300006
+offset_top = 609.801
+offset_bottom = -0.036376953
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -225,10 +234,10 @@ text = "Survivor Story: The Apocalypse"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Icon" type="Sprite2D" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer/SurvivorStory" unique_id=1302373507]
+[node name="Icon" type="Sprite2D" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer/SurvivorStory" unique_id=277034085]
 position = Vector2(53.965607, 50.000053)
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("8_4ptpv")
+texture = ExtResource("11_edbv4")
 
 [node name="ComingSoon1" type="Button" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer" unique_id=1338810800]
 custom_minimum_size = Vector2(370, 100)
@@ -311,7 +320,7 @@ vertical_alignment = 1
 [node name="Icon" type="Sprite2D" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer/SteamClicks" unique_id=2124236771]
 position = Vector2(53.965607, 50.000053)
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("7_h6hcb")
+texture = ExtResource("13_slgw0")
 
 [node name="ComingSoon2" type="Button" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer" unique_id=1288706805]
 custom_minimum_size = Vector2(370, 100)
@@ -395,7 +404,7 @@ vertical_alignment = 1
 [node name="Icon" type="Sprite2D" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer/Wonderjack" unique_id=1770622541]
 position = Vector2(53.965607, 50.000053)
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("7_h6hcb")
+texture = ExtResource("15_qg15s")
 
 [node name="ComingSoon3" type="Button" parent="ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer" unique_id=1198776616]
 custom_minimum_size = Vector2(370, 100)
@@ -445,7 +454,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 871.1443
-offset_right = 7.2595215
+offset_right = -58.07617
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -454,8 +463,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 529.9461
-offset_bottom = -387.09125
+offset_top = 522.6866
+offset_bottom = -394.35077
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -468,11 +477,11 @@ vertical_alignment = 1
 
 [node name="ScrollSocialMedias" type="ScrollContainer" parent="ControlLinks/Screens/SocialMediasControl" unique_id=1838371666]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 592.9461
-offset_bottom = -24.11444
+anchor_bottom = 0.96300006
+offset_top = 609.801
+offset_bottom = -0.036376953
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -594,7 +603,7 @@ vertical_alignment = 1
 [node name="Icon" type="Sprite2D" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Itchio" unique_id=997212928]
 position = Vector2(53.965607, 50.000053)
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("7_h6hcb")
+texture = ExtResource("13_2gok7")
 
 [node name="Instagram" type="Button" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer" unique_id=607856464]
 custom_minimum_size = Vector2(370, 100)
@@ -632,7 +641,7 @@ vertical_alignment = 1
 [node name="Icon" type="Sprite2D" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Instagram" unique_id=1051481896]
 position = Vector2(53.965607, 50.000053)
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("7_h6hcb")
+texture = ExtResource("14_xbhlu")
 
 [node name="Bluesky" type="Button" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer" unique_id=1832319241]
 custom_minimum_size = Vector2(370, 100)
@@ -670,7 +679,7 @@ vertical_alignment = 1
 [node name="Icon" type="Sprite2D" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer/Bluesky" unique_id=278356421]
 position = Vector2(53.965607, 50.000053)
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("7_h6hcb")
+texture = ExtResource("15_bqx4i")
 
 [node name="Twiter" type="Button" parent="ControlLinks/Screens/SocialMediasControl/ScrollSocialMedias/VBoxContainer" unique_id=867976987]
 custom_minimum_size = Vector2(370, 100)
@@ -711,16 +720,17 @@ scale = Vector2(0.15, 0.15)
 texture = ExtResource("7_h6hcb")
 
 [node name="MarkerLeafs" type="Marker2D" parent="." unique_id=233325979]
-position = Vector2(270, 747.01996)
+position = Vector2(320, 771.01996)
 scale = Vector2(1.1019988, 1.1019988)
 
 [node name="MarkerSteam" type="Marker2D" parent="." unique_id=1692580521]
-position = Vector2(206, 840)
+position = Vector2(256, 848)
 
 [node name="MarkerClicks" type="Marker2D" parent="." unique_id=27939854]
-position = Vector2(350, 827.02)
+position = Vector2(400, 848)
 
 [node name="ScreenBloqued" type="Control" parent="." unique_id=1896070779]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -762,7 +772,7 @@ grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("7_os0a2")
 theme_override_font_sizes/normal_font_size = 60
 bbcode_enabled = true
-text = "[pulse]Rotate your device[pulse]"
+text = "[pulse]Rotate your device[/pulse]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
