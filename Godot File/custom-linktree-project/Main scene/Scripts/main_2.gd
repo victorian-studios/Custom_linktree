@@ -39,9 +39,10 @@ func _process(delta):
 func verify_screen_size():
 	var size := DisplayServer.window_get_size()
 	if size.y > size.x:
-		$ScreenBloqued.visble = true
+		$ScreenBloqued.visible = true
+		
 	else:
-		$ScreenBloqued.visble = false
+		$ScreenBloqued.visible = false
 
 func _on_survivor_story_pressed():
 	OS.shell_open(link_survivor_story)
