@@ -22,19 +22,7 @@ extends Control
 @export var buttons_effects = []
 
 func _ready():
-	var size := DisplayServer.window_get_size()
-	OS.alert(str(size))
-	if size.y > size.x:
-		OS.alert("socorro!!!")
-	# if DisplayServer.screen_get_orientation() == DisplayServer.SCREEN_PORTRAIT:
-	# 	OS.alert(str(DisplayServer.screen_get_orientation()))
-	# else:
-	# 	OS.alert("SOCORRO")
-	# var is_mobile := OS.has_feature("web_android")
-	
-	# if is_mobile:
-	# 	pass
-	# 	# get_window().size = Vector2i(400, 1080)
+	verify_screen_size()
 
 	for button in $ControlLinks/Screens/GamesControl/ScrollGames/VBoxContainer.get_children():
 		if !button.disabled:
@@ -45,6 +33,15 @@ func _ready():
 		button.connect("mouse_entered", Callable(self, "_on_button_hovered").bind(button))
 		button.connect("mouse_exited", Callable(self, "_on_button_exited").bind(button))
 
+func _process(delta):
+	verify_screen_size()
+
+func verify_screen_size():
+	var size := DisplayServer.window_get_size()
+	if size.y > size.x:
+		$ScreenBloqued.visble = true
+	else:
+		$ScreenBloqued.visble = true
 
 func _on_survivor_story_pressed():
 	OS.shell_open(link_survivor_story)
@@ -100,7 +97,6 @@ func rmv_particles(button_name, effects_dict):
 func _on_button_hovered(button):
 	add_text_effects(button.get_node("Text"))
 	if button.name in buttons_effects:
-
 		match button.name:
 			"SurvivorStory":
 				current_effect = {button.name : [{"marker": $MarkerLeafs, "effect":vfx_leafs}]}
